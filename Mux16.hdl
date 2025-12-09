@@ -1,8 +1,18 @@
+// This file is part of www.nand2tetris.org
+// and the book "The Elements of Computing Systems"
+// by Nisan and Schocken, MIT Press.
+// File name: projects/01/Mux16.hdl
+
+/**
+ * 16 bit multiplexor. If sel==1 then out=b else out=a.
+ */
+
 CHIP Mux16 {
     IN a[16], b[16], sel;
     OUT out[16];
 
     PARTS:
+    // Put your code here:
     Mux(a=a[0], b=b[0], sel=sel, out=out[0]);
     Mux(a=a[1], b=b[1], sel=sel, out=out[1]);
     Mux(a=a[2], b=b[2], sel=sel, out=out[2]);
@@ -20,3 +30,4 @@ CHIP Mux16 {
     Mux(a=a[14], b=b[14], sel=sel, out=out[14]);
     Mux(a=a[15], b=b[15], sel=sel, out=out[15]);
 }
+
